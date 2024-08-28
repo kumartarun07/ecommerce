@@ -2,9 +2,17 @@ import 'package:ecommerce/ui_helper/app_containts.dart';
 import 'package:ecommerce/widgets/widget_page.dart';
 import 'package:flutter/material.dart';
 
-class CartPage extends StatelessWidget
+class CartPage extends StatefulWidget
 {
+  @override
+  State<CartPage> createState() => _CartPageState();
+}
+
+class _CartPageState extends State<CartPage> {
+  int count = 0;
+
   TextEditingController abc = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Color(0xffF5F5F5),
@@ -54,9 +62,22 @@ class CartPage extends StatelessWidget
                                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Color(0xffF5F5F5)),
                                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
-                                  IconButton(onPressed: (){}, icon:Icon(Icons.minimize_rounded,color: Colors.black,size: 15,)),
-                                  Text('1'),
-                              IconButton(onPressed: (){}, icon: Icon(Icons.add,color: Colors.black,size: 15,))
+                                  IconButton(onPressed: (){
+                                    if(count>1)
+                                      {
+                                        count--;
+                                      }
+                                    setState(() {
+
+                                    });
+                                  }, icon:Icon(Icons.minimize_rounded,color: Colors.black,size: 15,)),
+                                  Text("$count"),
+                              IconButton(onPressed: (){
+                                count++;
+                                setState(() {
+
+                                });
+                              }, icon: Icon(Icons.add,color: Colors.black,size: 15,))
                                 ],),
                               )
                             ],
@@ -118,5 +139,4 @@ class CartPage extends StatelessWidget
       ),
     );
   }
-
 }

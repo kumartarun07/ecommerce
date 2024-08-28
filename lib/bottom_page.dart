@@ -27,13 +27,11 @@ class _BottomPageState extends State<BottomPage>
       bottomNavigationBar: NavigationBar(
         indicatorColor: Colors.orange,
         destinations:
-        [
+     [
         NavigationDestination(icon: Icon(Icons.home), label: "Home"),
         NavigationDestination(icon: Icon(Icons.favorite_border), label: "Favourite"),
         NavigationDestination(icon: Icon(Icons.shopping_cart), label: "My Cart"),
         NavigationDestination(icon: Icon(Icons.account_circle_sharp), label: "My Profile")
-
-
       ],
       selectedIndex: selectedIndex,
         onDestinationSelected: (value)

@@ -1,3 +1,4 @@
+import 'package:ecommerce/bottom_page.dart';
 import 'package:flutter/material.dart';
 
 class WidgetPage extends StatelessWidget
@@ -10,7 +11,9 @@ class WidgetPage extends StatelessWidget
 
     return Container(height: 50,width: 50,
     decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),color: mcolor),
-      child: IconButton(onPressed: (){},icon: Icon(micon,size: (30),color: Colors.black,),)
+      child: IconButton(onPressed: ()
+      {Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomPage()));},
+        icon: Icon(micon,size: (30),color: Colors.black,),)
     );
   }
 }
