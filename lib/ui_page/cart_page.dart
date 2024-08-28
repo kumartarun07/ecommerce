@@ -1,5 +1,5 @@
 import 'package:ecommerce/ui_helper/app_containts.dart';
-import 'package:ecommerce/widgets/widget_page.dart';
+import 'package:ecommerce/ui_helper/widget_page.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatefulWidget
@@ -17,14 +17,12 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Color(0xffF5F5F5),
       appBar: AppBar(backgroundColor:Color(0xffF5F5F5),
-        title: Center(
-        child: Row(
-          children: [
-          WidgetPage(micon:Icons.arrow_back_ios_new,mcolor: Colors.white,),
-          SizedBox(width: 80,),
-          Text('My Cart',style: myfont25(),)
-        ],),
-      ),),
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: WidgetPage(micon:Icons.arrow_back_ios_new,mcolor: Colors.white,),
+        ),
+        leadingWidth: 70,
+        title: Text('My Cart',style: myfont25(),),centerTitle: true,),
       body:
       Column(
         children: [

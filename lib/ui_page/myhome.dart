@@ -1,8 +1,7 @@
-import 'package:ecommerce/detail.dart';
+import 'package:ecommerce/ui_page/detail.dart';
 import 'package:ecommerce/ui_helper/app_containts.dart';
 import 'package:flutter/material.dart';
-
-import 'widgets/widget_page.dart';
+import '../ui_helper/widget_page.dart';
 
 class MyHome extends StatelessWidget
 {
@@ -11,17 +10,21 @@ class MyHome extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(backgroundColor: Colors.white,
-        title:  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          WidgetPage(micon: Icons.menu,mcolor: Color(0xfff5f5f5)),
-          WidgetPage(micon: Icons.notifications,mcolor: Color(0xfff5f5f5),),
-
-        ],),),
+        leadingWidth: 80,
+        leading: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: WidgetPage(micon: Icons.menu,mcolor: Color(0xfff5f5f5)),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: WidgetPage(micon: Icons.notifications,mcolor: Color(0xfff5f5f5),),
+          ),
+        ],),
       body:
       SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(child:
             Container(height:50 ,width: 400,
               margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               decoration:
@@ -36,7 +39,7 @@ class MyHome extends StatelessWidget
                   )
                 ,),
 
-            )),
+            ),
             SizedBox(height: 10),
             Stack(alignment: Alignment.centerLeft,
               children: [
@@ -71,7 +74,7 @@ class MyHome extends StatelessWidget
                 )
               ],
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 10),
             SizedBox(height: 100,
               child: ListView.builder(
                 itemCount: photos.pic.length,
@@ -90,7 +93,8 @@ class MyHome extends StatelessWidget
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
-              width: 400,height: 400,
+              width: 400,
+
               child: Column(mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,8 +107,11 @@ class MyHome extends StatelessWidget
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail()));
                     },
-                    child: Container(height:300,color: Color(0xffF5F5F5),
+                    child: Container(
+                      color: Color(0xffF5F5F5),
                       child: GridView.builder(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
                         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                             maxCrossAxisExtent: 300,
                             mainAxisSpacing: 15,

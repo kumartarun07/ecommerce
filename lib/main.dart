@@ -1,7 +1,10 @@
-import 'package:ecommerce/bottom_page.dart';
-import 'package:ecommerce/cart_page.dart';
-import 'package:ecommerce/detail.dart';
-import 'package:ecommerce/myhome.dart';
+import 'package:ecommerce/ui_page/bottom_page.dart';
+import 'package:ecommerce/ui_page/cart_page.dart';
+import 'package:ecommerce/ui_page/detail.dart';
+import 'package:ecommerce/ui_page/login_page.dart';
+import 'package:ecommerce/ui_page/myhome.dart';
+import 'package:ecommerce/ui_page/signup_page.dart';
+import 'package:ecommerce/ui_page/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -17,7 +20,7 @@ class Home extends StatelessWidget
 
   return MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: BottomPage()
+    home: SplashPage()
   );
   }
 

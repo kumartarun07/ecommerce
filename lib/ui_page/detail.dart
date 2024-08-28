@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:ecommerce/ui_helper/app_containts.dart';
-import 'package:ecommerce/widgets/widget_page.dart';
+import 'package:ecommerce/ui_helper/widget_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,15 @@ class Detail extends StatelessWidget
   @override
   Widget build(BuildContext context){
   return Scaffold(
-    appBar: AppBar(backgroundColor: Colors.white,),
+    appBar: AppBar(backgroundColor: Colors.white,
+    leading:  WidgetPage(micon: Icons.arrow_back_ios_new,mcolor: Colors.white,),
+      actions: [
+        WidgetPage(micon: Icons.share,mcolor: Colors.white,),
+        SizedBox(width: 20,),
+        WidgetPage(micon: Icons.favorite_border,mcolor: Colors.white,),
+
+      ],
+    ),
     body: SingleChildScrollView(
       child: Column(
         children: [
@@ -20,22 +28,7 @@ class Detail extends StatelessWidget
             height:300,width:450,
               color: Color(0xffF5F5F5),
           child:
-          Stack(fit: StackFit.expand,
-            children: [
-              Image.asset('assets/images/head.jpg',fit: BoxFit.fill,),
-              Row(crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                WidgetPage(micon: Icons.arrow_back_ios_new,mcolor: Colors.white,),
-               Row(
-                 children: [
-                   WidgetPage(micon: Icons.share,mcolor: Colors.white,),
-                 SizedBox(width: 20,),
-                 WidgetPage(micon: Icons.favorite_border,mcolor: Colors.white,),
-                 ],)
-              ],),
-            ],
-          ),
+          Image.asset('assets/images/head.jpg',fit: BoxFit.fill,),
 
           ),
           Container(

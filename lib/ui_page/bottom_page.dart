@@ -1,6 +1,7 @@
-import 'package:ecommerce/cart_page.dart';
-import 'package:ecommerce/detail.dart';
-import 'package:ecommerce/myhome.dart';
+import 'package:ecommerce/ui_page/cart_page.dart';
+import 'package:ecommerce/ui_page/detail.dart';
+import 'package:ecommerce/ui_page/myhome.dart';
+import 'package:ecommerce/ui_page/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomPage extends StatefulWidget
@@ -17,7 +18,8 @@ class _BottomPageState extends State<BottomPage>
 
     MyHome(),
     Detail(),
-    CartPage()
+    CartPage(),
+    ProfilePage()
   ];
   @override
   Widget build(BuildContext context)
