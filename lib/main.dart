@@ -6,7 +6,7 @@ void main ()
 {
   runApp(Home());
 }
-///homes
+
 class Home extends StatelessWidget
 {
   @override
