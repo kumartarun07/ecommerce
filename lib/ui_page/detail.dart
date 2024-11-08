@@ -1,17 +1,18 @@
-import 'dart:ui';
-
 import 'package:ecommerce/ui_helper/app_containts.dart';
 import 'package:ecommerce/ui_helper/widget_page.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
 class Detail extends StatelessWidget
 {
+  String? text;
+  String? imgPath;
+  Detail({this.text,this.imgPath});
   TextEditingController abc =TextEditingController();
   @override
   Widget build(BuildContext context){
   return Scaffold(
-    appBar: AppBar(backgroundColor: Colors.white,
+    backgroundColor:Color(0xffFFFFFF),
+    appBar: AppBar(backgroundColor:Color(0xffFFFFFF),
     leading:  WidgetPage(micon: Icons.arrow_back_ios_new,mcolor: Colors.white,),
       actions: [
         WidgetPage(micon: Icons.share,mcolor: Colors.white,),
@@ -28,12 +29,13 @@ class Detail extends StatelessWidget
             height:300,width:450,
               color: Color(0xffF5F5F5),
           child:
-          Image.asset('assets/images/head.jpg',fit: BoxFit.fill,),
+          Image.asset("${imgPath}",fit: BoxFit.fill,),
 
           ),
+          SizedBox(height: 10,),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 10),
-            height: 600,width: double.infinity,
+            width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(borderRadius: BorderRadius.vertical(top:Radius.circular(30)),
              color:Color(0xffFFFFFF),
             ),
@@ -41,7 +43,7 @@ class Detail extends StatelessWidget
               children: [
                 Row(
                   children: [
-                    Text('Wireless Headphone',style: myfont20(),),
+                    Text('${text}',style: myfont20(),),
                   ],
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,6 +72,7 @@ class Detail extends StatelessWidget
                 ],),
                 SizedBox(height: 10,),
                 Text('Color',style: myfont20(),),
+                SizedBox(height: 10,),
                 Container(
                   width: 250,
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,8 +84,8 @@ class Detail extends StatelessWidget
                     mycont(mycolor: Colors.grey),
                   ],),
                 ),
-                SizedBox(height: 20,),
-                Container(height: 50,width: 450,
+                SizedBox(height: 10,),
+                Container(height: 30,width: 450,
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Deascription',style: myfont15(),),
@@ -93,7 +96,7 @@ class Detail extends StatelessWidget
                 ),
                 SizedBox(height: 10,),
                 mytext(),
-                SizedBox(height: 20,),
+                SizedBox(height: 15,),
                 Container(width: 450,height: 60,
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [

@@ -103,42 +103,45 @@ class MyHome extends StatelessWidget
                   Text('See all',style: TextStyle(fontSize: 15),),
                 ],),
                   SizedBox(height: 10,),
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail()));
-                    },
-                    child: Container(
-                      color: Color(0xffF5F5F5),
-                      child: GridView.builder(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 300,
-                            mainAxisSpacing: 15,
-                            childAspectRatio: 9/16,
-                            crossAxisSpacing: 20,
-                            mainAxisExtent:250
-                        ),
-                        itemCount: photos.pic.length,
-                        itemBuilder: (_, index)
-                        {
-                          return Stack(alignment: Alignment.topRight,
-                            children: [
-                              Container(
+                  Container(
+                    color: Color(0xffF5F5F5),
+                    child: GridView.builder(
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                          maxCrossAxisExtent: 300,
+                          mainAxisSpacing: 15,
+                          childAspectRatio: 9/16,
+                          crossAxisSpacing: 20,
+                          mainAxisExtent:250
+                      ),
+                      itemCount: photos.pic.length,
+                      itemBuilder: (_, index)
+                      {
+                        return Stack(alignment: Alignment.topRight,
+                          children: [
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail(
+                                  text: earbuds.pic[index]["name"],
+                                  imgPath: earbuds.pic[index]["pic"],
+                                )));
+                              },
+                              child: Container(
                                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),
                                 image: DecorationImage(image: AssetImage(earbuds.pic[index]['pic']??"default",),fit: BoxFit.cover)
                                 ),
                               ),
-                              Container(height: 50,width: 50,
-                              decoration: BoxDecoration(borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(25),bottomLeft: Radius.circular(15)),
-                                  color: Colors.orange),
-                                child: Icon(Icons.favorite_border),
-                              )
-                            ],
-                          );
-                        },),
-                    ),
+                            ),
+                            Container(height: 50,width: 50,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(25),bottomLeft: Radius.circular(15)),
+                                color: Colors.orange),
+                              child: Icon(Icons.favorite_border),
+                            )
+                          ],
+                        );
+                      },),
                   ),
               ],),
             ),

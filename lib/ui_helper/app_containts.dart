@@ -24,8 +24,8 @@ class earbuds
 {
   static final List<Map<String,dynamic>>pic=[
 
-    {'name':'Shoes','pic':'assets/images/earbuds.webp'},
-    {'name':'Beauty','pic':'assets/images/sweter.webp'},
+    {'name':'Earbuds','pic':'assets/images/earbuds.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
     {'name':'Women Fashion','pic':'assets/images/women_fasion.webp'},
     {'name':'Jewelry','pic':'assets/images/jewellary.webp'},
     {'name':'Men Fashion','pic':'assets/images/mens.webp'},
