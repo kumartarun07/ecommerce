@@ -1,7 +1,7 @@
-import 'package:ecommerce/ui_page/cart_page.dart';
-import 'package:ecommerce/ui_page/detail.dart';
-import 'package:ecommerce/ui_page/myhome.dart';
-import 'package:ecommerce/ui_page/profile_page.dart';
+import 'package:ecommerce/ui_page/dashboard/nav_page/cart_page.dart';
+import 'package:ecommerce/ui_page/dashboard/nav_page/detail.dart';
+import 'package:ecommerce/ui_page/dashboard/nav_page/myhome.dart';
+import 'package:ecommerce/ui_page/dashboard/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomPage extends StatefulWidget
@@ -31,7 +31,7 @@ class _BottomPageState extends State<BottomPage>
         destinations:
      [
         NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-        NavigationDestination(icon: Icon(Icons.favorite_border), label: "Favourite"),
+        NavigationDestination(icon: Icon(Icons.favorite), label: "Favourite"),
         NavigationDestination(icon: Icon(Icons.shopping_cart), label: "My Cart"),
         NavigationDestination(icon: Icon(Icons.account_circle_sharp), label: "My Profile")
       ],

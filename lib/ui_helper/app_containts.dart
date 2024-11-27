@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 class photos
 {
+  /// set preference key
+  static final String PREFS_UID_KEY = 'uid';
   static final List<Map<String,dynamic>>pic=[
 
     {'name':'Shoes','pic':'assets/images/shoes.webp'},
@@ -16,6 +18,15 @@ class photos
     {'name':'Headphones','pic':'assets/images/headphone.jpg'},
     {'name':'Perfume','pic':'assets/images/perfume.jpg'},
     {'name':'Nackless','pic':'assets/images/neckless.jpg'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
+    {'name':'Shoes','pic':'assets/images/shoes2.webp'},
     {'name':'Shoes','pic':'assets/images/shoes2.webp'},
   ];
 }
@@ -38,6 +49,16 @@ class earbuds
     {'name':'Nackless','pic':'assets/images/neckless.jpg'},
     {'name':'Shoes','pic':'assets/images/shoes2.webp'},
     {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
+    {'name':'Sweater','pic':'assets/images/sweter.webp'},
   ];
 }
 
@@ -52,23 +73,27 @@ class Cart
         {'name':'Wireless Headphone','text':'Electronics','rupay':'\$120.00','pic':'assets/images/earbuds.webp'},
         {'name':'Women Sweter','text':'Women Fashion','rupay':'\$100.00','pic':'assets/images/sweter.webp'},
         {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
+        {'name':'Women Sweter','text':'Women Fashion','rupay':'\$120.00','pic':'assets/images/sweter.webp'},
       ];
 }
 
- TextStyle myfont25()
-{
-  return TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black);
-}
-
-TextStyle myfont20()
-{
-  return TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black);
-}
-
-TextStyle myfont15()
-{
-  return TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.black);
-}
 
 Text mytext()
 {
