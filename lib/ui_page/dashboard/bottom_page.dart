@@ -26,6 +26,8 @@ class _BottomPageState extends State<BottomPage>
   {
     return Scaffold(
       body:navPages[selectedIndex],
+      floatingActionButtonLocation:      FloatingActionButtonLocation.centerDocked,
+      floatingActionButton:     FloatingActionButton(onPressed: (){},child: Icon(Icons.add),),
       bottomNavigationBar: NavigationBar(
         indicatorColor: Colors.orange,
         destinations:

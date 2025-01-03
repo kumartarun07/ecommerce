@@ -25,7 +25,6 @@ class _SplashPageState extends State<SplashPage>
         nextPage=BottomPage();
       }
       Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>nextPage));
-
     }
     );
   }
